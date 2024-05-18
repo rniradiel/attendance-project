@@ -1,10 +1,20 @@
+<script setup>
+  import DateIcon from './icons/IconDate.vue'
+</script>
+
 <template>
   <div class="attendance">
     <h2>Manage Attendance</h2>
     <p>Attendance Manager is where you can generate, add, edit, and export the logs of the employees.</p>
     <div class="controls">
-      <button class="btn-primary">Attendance Logs</button>
-      <button class="btn-secondary">Batch Add</button>
+      <button class="btn-primary">
+        <font-awesome-icon icon="fa-solid fa-calendar-week" />  
+        Attendance Logs
+      </button>
+      <button class="btn-secondary">
+        <font-awesome-icon icon="fa-solid fa-download" />
+        Batch Add
+      </button>
     </div>
     <hr>
     <div class="date">
@@ -18,15 +28,30 @@
             <a href="">Show All</a>
         </div>
         <ul>
-            <li><a href="">Sprout Solutions</a></li>
-            <li><a href="">All</a></li>
-            <li><a href="">All</a></li>
-            <li><a href="">All</a></li>
+            <li><a href=""><font-awesome-icon icon="fa-solid fa-building" /> Sprout Solutions</a></li>
+            <li><a href=""><font-awesome-icon icon="fa-solid fa-users" />All</a></li>
+            <li><a href=""><font-awesome-icon icon="fa-solid fa-location-dot" />All</a></li>
+            <li>
+              <a href="">
+                <span>
+                  <font-awesome-icon icon="fa-solid fa-user" />
+                </span>
+                All
+              </a>
+            </li>
         </ul>
     </div>
     <div class="search">
-        <button>Search</button>
-        <button>Export</button>
+        <button>
+          <span>
+            <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
+          </span>
+          Search
+        </button>
+        <button>
+          <font-awesome-icon icon="fa-solid fa-download" />
+          Export
+        </button>
     </div>
   </div>
 </template>

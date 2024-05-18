@@ -1,6 +1,6 @@
 <script setup>
 import Header from './components/Header.vue'
-import Attendance from './components/Attendance.vue'
+import Menu from './components/Menu.vue'
 import Logs from './components/Logs.vue'
 </script>
 
@@ -8,7 +8,7 @@ import Logs from './components/Logs.vue'
   <div id="app">
     <Header />
     <main>
-      <Attendance />
+      <Menu />
       <Logs />
     </main>
   </div>

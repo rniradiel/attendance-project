@@ -12,14 +12,25 @@
         <li><a href="#">Maintenance</a></li>
         <li>
             <input type="text" placeholder="Search Employee...">
-            <button></button>
+            <button> 
+              <span>
+                <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
+              </span>
+            </button>
         </li>
         <li class="dropdown">
-          <button class="dropbtn" @click="toggleDropdown">Dropdown</button>
+          <button class="dropbtn" @click="toggleDropdown">
+            <span>
+              <font-awesome-icon icon="fa-solid fa-user" />
+            </span>
+            Admin    
+            <span>
+              <font-awesome-icon icon="fa-solid fa-caret-down" />
+            </span>
+          </button>
           <ul class="dropdown-content" v-if="show">
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Item 2</a></li>
-            <li><a href="#">Item 3</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Logout</a></li>
           </ul>
         </li>
       </ul>
