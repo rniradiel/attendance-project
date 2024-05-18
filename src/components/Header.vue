@@ -5,53 +5,22 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#">My Requests</a></li>
-        <li><a href="#">My Team</a></li>
-        <li><a href="#">Company Administration</a></li>
-        <li><a href="#">Tools</a></li>
-        <li><a href="#">Maintenance</a></li>
+        <Navbar />
         <li>
-            <input type="text" placeholder="Search Employee...">
-            <button> 
-              <span>
-                <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
-              </span>
-            </button>
+            <SearchBar />
         </li>
-        <li class="dropdown">
-          <button class="dropbtn" @click="toggleDropdown">
-            <span>
-              <font-awesome-icon icon="fa-solid fa-user" />
-            </span>
-            Admin    
-            <span>
-              <font-awesome-icon icon="fa-solid fa-caret-down" />
-            </span>
-          </button>
-          <ul class="dropdown-content" v-if="show">
-            <li><a href="#">Account</a></li>
-            <li><a href="#">Logout</a></li>
-          </ul>
-        </li>
+        <NavLogin />
       </ul>
     </nav>
   </header>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      show: false,
-    };
-  },
-  methods: {
-    toggleDropdown() {
-      this.show = !this.show;
-    },
-  },
-};
+<script setup>
+import SearchBar from './SearchBar.vue';
+import Navbar from './Navbar.vue';
+import NavLogin from './NavLogin.vue';
 </script>
+
 <style scoped>
 .header {
   display: flex;
@@ -81,6 +50,7 @@ nav ul {
 
 nav ul li {
   margin-right: 1rem;
+  position: relative;
 }
 
 nav ul li a {
@@ -90,34 +60,5 @@ nav ul li a {
 
 nav ul li a:hover {
   text-decoration: underline;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content li {
-  margin-bottom: 10px;
-}
-
-.dropdown-content a {
-  color: #000;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 </style>
