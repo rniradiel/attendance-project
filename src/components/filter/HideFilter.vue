@@ -1,6 +1,6 @@
 <template>
      <ul class="filter-menu">
-            <li v-for="(item, index) in navbarItems" :key="index">
+            <li v-for="(item, index) in filterItems" :key="index">
                 <a :href="`#${item.text.toLowerCase()}`">
                     <span class="filter-icon">
                         <font-awesome-icon :icon="[item.iconPrefix, item.icon]" />
@@ -15,7 +15,7 @@
 export default {
   data() {
     return {
-      navbarItems: [
+      filterItems: [
         { text: "Sprout Solutions", iconPrefix: "fa-solid", icon: "fa-building" },
         { text: "All", iconPrefix: "fa-solid", icon: "fa-users" },
         { text: "All", iconPrefix: "fa-solid", icon: "fa-location-dot" },
@@ -27,23 +27,6 @@ export default {
 </script>
 
 <style>
-.filter-header {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-}
-
-.title {
-    font-size: 14px;
-    text-transform: uppercase;
-    color: #3C5B51;
-    margin-bottom: 1rem;
-}
-
-.filter-header a {
-    font-weight: 500;
-}
-
 ul {
     list-style: none;
     padding: 0;
