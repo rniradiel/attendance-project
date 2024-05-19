@@ -1,11 +1,15 @@
 <template>
     <div class="controls">
       <a href="#" class="active">
-        <font-awesome-icon icon="fa-solid fa-calendar-week" />  
+        <span class="icon">
+          <font-awesome-icon icon="fa-solid fa-calendar-week" />  
+        </span>
         Attendance Logs
       </a>
       <a href="#" class="">
-        <font-awesome-icon icon="fa-solid fa-download" />
+        <span class="icon">
+          <font-awesome-icon icon="fa-solid fa-download" />
+        </span>
         Exported Files
       </a>
     </div>
@@ -27,11 +31,15 @@
   text-align: left;
   cursor: pointer;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .controls a.active {
   background: #E6FFEE;
+  color: #2D4F43;
 }
 
-
+.controls a.active .icon {
+ color: #17AD49;
+}
 </style>

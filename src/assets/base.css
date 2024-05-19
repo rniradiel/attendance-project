@@ -83,4 +83,5 @@ a {
 button {
   border-radius: 4px;
   background: none;
+  border-color: #ccc;
 }

@@ -23,6 +23,12 @@ import MenuButtons from './MenuButtons.vue';
   margin: 2rem;
 }
 
+@media (min-width: 1024px) {
+  .side-menu {
+    max-width: 30%;
+  }
+}
+
 hr {
   margin: 1rem 0;
 }
