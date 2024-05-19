@@ -48,13 +48,14 @@ export default {
 </script>
 
 <style>
-aside {
+main {
   margin: 2rem;
 }
 
 @media (min-width: 1024px) {
   aside {
     max-width: 30%;
+    margin-right: 2rem;
   }
 }
 

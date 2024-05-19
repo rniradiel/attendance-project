@@ -45,3 +45,28 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.table-content {
+  width: 100%
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+}
+
+th {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+th,
+td {
+  border: 1px solid #C3CDC9;
+  padding: 8px;
+  text-align: left;
+}
+
+</style>
