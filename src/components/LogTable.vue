@@ -1,52 +1,34 @@
 <template>
-    <div class="attendance">
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Employee</th>
-            <th>Status</th>
-            <th>Time In</th>
-            <th>Time Out</th>
-            <th>Hours Worked</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>2023-03-29</td>
-            <td>John Doe</td>
-            <td>Present</td>
-            <td>9:00 AM</td>
-            <td>5:00 PM</td>
-            <td>8 hours</td>
-            <td>
-              <button class="btn-secondary">Edit</button>
-              <button class="btn-danger">Delete</button>
-            </td>
-          </tr>
-          <!-- Add more attendance records here -->
-        </tbody>
-      </table>
-    </div>
-  </template>
+  <DataTable :columns="columns" ajax="/data.json" class="display" width="100%">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Office</th>
+          <th>Extn.</th>
+          <th>Start date</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+  </DataTable>
+</template>
+
+<script setup lang="ts">
+import DataTable from 'datatables.net-vue3';
+import Select from 'datatables.net-select';
+ 
+DataTable.use(Select);
+
+const columns = [
+  { data: 'name' },
+  { data: 'position' },
+  { data: 'office' },
+  { data: 'extn' },
+  { data: 'start_date' },
+  { data: 'salary' },
+];
+</script>
   
-<style scoped>
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th,
-td {
-  text-align: left;
-  padding: 0.5rem;
-  border-bottom: 1px solid #ccc;
-}
-
-th {
-  background-color: #f2f2f2;
-}
-
+<style>
+@import 'datatables.net-dt';
 </style>
