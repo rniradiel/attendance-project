@@ -1,10 +1,5 @@
 <template>
-    <div class="filters">
-        <div class="filter-header">
-            <h3 class="title">Filter</h3>
-            <a href="#">Show All</a>
-        </div>
-        <ul class="filter-menu">
+     <ul class="filter-menu">
             <li v-for="(item, index) in navbarItems" :key="index">
                 <a :href="`#${item.text.toLowerCase()}`">
                     <span class="filter-icon">
@@ -13,21 +8,8 @@
                     {{ item.text }}
                 </a>
             </li>
-            <!-- <li><a href="#"><font-awesome-icon icon="fa-solid fa-building" /> Sprout Solutions</a></li>
-            <li><a href="#"><font-awesome-icon icon="fa-solid fa-users" />All</a></li>
-            <li><a href="#"><font-awesome-icon icon="fa-solid fa-location-dot" />All</a></li>
-            <li>
-              <a href="#">
-                <span>
-                  <font-awesome-icon icon="fa-solid fa-user" />
-                </span>
-                All
-              </a>
-            </li> -->
         </ul>
-    </div>
 </template>
-
 
 <script>
 export default {
@@ -38,7 +20,6 @@ export default {
         { text: "All", iconPrefix: "fa-solid", icon: "fa-users" },
         { text: "All", iconPrefix: "fa-solid", icon: "fa-location-dot" },
         { text: "All", iconPrefix: "fa-solid", icon: "fa-user" },
-        
     ]
     }
   }

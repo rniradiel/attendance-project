@@ -1,11 +1,19 @@
 <template>
-    <input type="text" placeholder="Search Employee...">
-    <button>
-        <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
-    </button>
+    <li>
+        <form action="">
+            <input type="text" placeholder="Search Employee...">
+            <button>
+                <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
+            </button>
+        </form>
+    </li>
 </template>
 
 <style scoped>
+form {
+    height: 100%;
+}
+
 input {
     background: none;
     border: 1px solid #ddd;

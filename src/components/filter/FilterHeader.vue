@@ -1,4 +1,8 @@
 <template>
+    <div class="title">
+      <h2>Manage Attendance</h2>
+      <p>Attendance Manager is where you can generate, add, edit, and export the logs of the employees.</p>
+    </div>
     <div class="controls">
       <a href="#" class="active">
         <span class="icon">
@@ -13,9 +17,14 @@
         Exported Files
       </a>
     </div>
+    <hr>
 </template>
 
-<style>
+<style scoped>
+.title p {
+  font-size: 14px;
+}
+
 .controls {
   display: flex;
   flex-direction: column;
@@ -41,5 +50,9 @@
 
 .controls a.active .icon {
  color: #17AD49;
+}
+
+hr {
+  margin: 1rem 0;
 }
 </style>

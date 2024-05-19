@@ -1,14 +1,10 @@
 <template>
   <header class="header">
-    <div class="logo">
-      <img src="../assets/logo.png" alt="Logo" />
-    </div>
+    <NavLogo />
     <nav>
       <ul>
         <Navbar />
-        <li>
-            <SearchBar />
-        </li>
+        <NavSearch />
         <NavLogin />
       </ul>
     </nav>
@@ -16,7 +12,8 @@
 </template>
 
 <script setup>
-import SearchBar from './SearchBar.vue';
+import NavLogo from './NavLogo.vue'
+import NavSearch from './NavSearch.vue';
 import Navbar from './Navbar.vue';
 import NavLogin from './NavLogin.vue';
 </script>
@@ -29,16 +26,6 @@ import NavLogin from './NavLogin.vue';
   background-color: #333;
   color: #fff;
   padding: 1rem;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  height: 2rem;
-  margin-right: 1rem;
 }
 
 nav ul {
