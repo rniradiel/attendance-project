@@ -1,6 +1,16 @@
 <template>
     <form @submit.prevent="applyFilter">
-      <FilterDate />
+      <div class="date">
+          <h3 class="title">Date Range</h3>
+          <div class="form-input">
+              <label for="startDate">Date From</label>
+              <input type="date" id="startDate" v-model="filter.startDate">
+          </div>
+          <div class="form-input">
+              <label for="endDate">Date To</label>
+              <input type="date" id="endDate" v-model="filter.endDate">
+          </div>
+      </div>
       <div class="filters">
         <div class="filter-header">
           <h3 class="title">Filters</h3>
@@ -57,6 +67,8 @@
           department: '',
           location: '',
           employee: '',
+          startDate: '',
+          endDate: '',
         },
         currentComponent: 'HideFilter',
         buttonText: 'Show All',

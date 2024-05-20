@@ -4,7 +4,7 @@
             <span class="icon">
                 <font-awesome-icon icon="fa-solid fa-calendar-week" />  
             </span>
-            Date Range
+            {{ dateRangeTitle }}
         </h2>
         <div class="log-actions">
             <button class="active">Active Logs</button>
@@ -12,6 +12,17 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    props: {
+        dateRangeTitle: {
+        type: String,
+        required: true
+      }
+    },
+}
+</script>
 
 <style scoped>
 .log-header {
@@ -21,11 +32,12 @@
     margin-bottom: 1rem;
 }
 
-h2 {
+.log-header h2 {
     font-size: 16px;
+    font-weight: 500;
 }
 
-.icon {
+.log-header .icon {
     color: #17AD49;
 }
 
