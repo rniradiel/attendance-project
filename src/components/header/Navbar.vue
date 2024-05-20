@@ -7,8 +7,8 @@
             </span>
         </a>
         <ul class="dropdown-content">
-            <li><a href="#">Sample</a></li>
-            <li><a href="#">Sample</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Menu</a></li>
         </ul>
       </li>
 </template>

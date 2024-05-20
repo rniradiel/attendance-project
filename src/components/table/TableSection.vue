@@ -17,8 +17,8 @@
                   <td>{{ item.name }}</td>
                   <td>{{ item.date }}</td>
                   <td>{{ item.time }}</td>
-                  <td>{{ item.status }}</td>
-                  <td>{{ item.logDetails }}</td>
+                  <td :class="{ 'in-status': item.status === 'IN', 'out-status': item.status === 'OUT' }">{{ item.status }}</td>
+                  <td> <span :class="{ 'app-logDetails': item.logDetails === 'APP'}">{{ item.logDetails }}</span></td>
                   <td>{{ item.location }}</td>
                   <td>{{ item.company }}</td>
               </tr>
@@ -32,7 +32,7 @@
           </select>
         </div>
         <div>
-          <p>Showing 1 - 10 of 10</p>
+          <p>{{ itemsPerPage }}</p>
         </div>
       </div>
     </div>
@@ -44,6 +44,9 @@ export default {
     data: {
       type: Array,
       required: true
+    },
+    itemsPerPage: {
+      type: String,
     }
   },
   computed: {
@@ -75,6 +78,7 @@ td {
   border-bottom: 1px solid #C3CDC9;
   padding: 10px;
   text-align: left;
+  font-weight: 500;
 }
 
 .table-indicator {
@@ -93,6 +97,22 @@ td {
   border: 1px solid #A5B3AF;
   border-radius: 4px;
   color: #00291b;
+}
+
+.in-status {
+  color: #0F6EEB;
+}
+
+.out-status {
+  color: #FF7F00;
+}
+
+.app-logDetails {
+  background-color: #C3CDC9;
+  color: #3C5B51;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-weight: 500;
 }
 
 </style>
