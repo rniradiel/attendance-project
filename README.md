@@ -1,4 +1,4 @@
-# manage-attendance
+# attendance-project
 
 This attendance project is developed with Vue 3 in Vite submitted as a technical exam.
 
